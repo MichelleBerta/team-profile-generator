@@ -1,6 +1,5 @@
-const Intern = require("../lib/Intern");
-const Employee = require("../lib/Employee");
-const { test, expect } = require("@jest/globals");
+const Intern = require("../lib/intern");
+const Employee = require("../lib/employee");
 
 test("Can get name via getName()", () => {
   const testValue = "Alice";

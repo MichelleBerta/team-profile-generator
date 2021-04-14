@@ -1,5 +1,5 @@
-const Engineer = require("../lib/Engineer");
-const Employee = require("../lib/Employee");
+const Engineer = require("../lib/engineer");
+const Employee = require("../lib/employee");
 
 test("Can get name via getName()", () => {
   const testValue = "Alice";
