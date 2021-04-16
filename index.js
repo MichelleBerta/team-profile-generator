@@ -6,24 +6,12 @@ const Manager = require('./lib/manager');
 
 const employees = [];
 
-
 function addEmplolyee() {
     inquirer.prompt([{
 message: "What is the new employee's name?",
 name: "name"
     },
-
-    {
-        type: "list",
-        message: "Please select the new employee's title",
-        choices: [
-            "Engineer",
-            "Intern",
-            "Manager"
-        ], 
-        title: "title"
-    },
-
+    
     {
         message: "What is the new employee's id?",
         name: "id"
@@ -32,21 +20,35 @@ name: "name"
     {
         message: "What is the new employee's email?",
         name: "email"
-    }])
+    },
 
+    {
+        type: "list",
+        message: "Please select the new employee's title",
+        choices: [
+            "Engineer",
+            "Intern",
+            "Manager",
+        ], 
+        title: "title"
+
+    // how can this be added to inquire above?
+    {
     then(function({name, title, id, email}) {
         let titleInfo = '';
-        if (role === "Engineer") {
+        if (title === "Engineer") {
             titleInfo = "gitHub username";
-        } else if (role === "Intern") {
+        } else if (title === "Intern") {
             titleInfo = "school name";
         } else {
             titleInfo === "office phone number";
         }
-        inquirer.prompt([{
-            message: "What is the new employee's `${titleInfo}`",
-            name: "titleInfo"
-        },
+
+    },
+    
+    )}
+    
+        
     {
         type: "list",
         message: "Do you want to add another employee?", 
@@ -54,28 +56,14 @@ name: "name"
             "yes",
             "no"
         ],
+        // how do i start this function over again?
         name: "moreEmployees"
-    }])
-
-    .then(function({titleInfo, moreEmployees}) {
-        let newEmployee;
-        if (role === "Engineer") {
-            newEmployee = new Engineer(name, id, email, titleInfo);
-        } else if (role === "Intern") {
-            newEmployee = new Intern(name, id, email, titleInfo);
-        } else {
-            newEmployee = new Manager(name, id, email, titleInfo);
-        }
-        employees.push(newEmployee);
-        addHtml(newEmployee)
-        .then(function() {
-            if (moreEmployees === "yes") {
-                addEmployee();
-            } else {
-                finishHtml();
-            }
-        });
-        
-    });
-});
+    }
 }
+
+
+// need init function
+
+// need a function to write html
+
+// fs write/append file
