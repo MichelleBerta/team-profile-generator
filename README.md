@@ -4,7 +4,17 @@ This command-line application takes in information about employees on a software
 
 The user is asked to input the new employees' name, email, and id.  The user is then prompted to select the new employees' title...Engineer, Manager or Intern.  Once a title is selected the user is asked for additional information based on the title selected. The team.html page is automatically generated showing each employee's information based on their title.
 
-
+## Watch a demo of this app in use!
 https://youtu.be/K93Dql_0bBg
 
 ![team-profile-generator](Assets/team-profile-generator-screenshot.png)
+
+
+## Built with:
+```
+JavaScript
+Node.js
+Inquirer - application prompts
+Jest - for testing
+Materialize - CSS framework
+```
