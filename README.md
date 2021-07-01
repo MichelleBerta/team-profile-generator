@@ -21,4 +21,4 @@ This command-line application takes in information about employees on a software
 
 ## Screenshots
 
-![team-profile-generator](Assets/team-profile-generator-screenshot.png)
+![team-profile-generator](Assets/teamProfile.png)
